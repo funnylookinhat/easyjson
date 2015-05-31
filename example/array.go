@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/funnylookinhat/_easyjson/lib"
+	"github.com/funnylookinhat/easyjson/lib"
 	"log"
 )
 

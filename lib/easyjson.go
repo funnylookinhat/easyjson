@@ -59,6 +59,16 @@ func GetBool(j JSData, keys ...interface{}) (bool, error) {
 }
 
 func GetSlice(j JSData, keys ...interface{}) ([]interface{}, error) {
+	if len(keys) == 0 {
+		v := j.([]interface{})
+
+		if fmt.Sprintf("%s", reflect.TypeOf(j.(interface{}))) != "[]interface {}" {
+			return nil, fmt.Errorf("Value is not a slice.")
+		}
+
+		return v, nil
+	}
+
 	v, err := getValue(j, keys...)
 
 	if err != nil {
@@ -73,6 +83,16 @@ func GetSlice(j JSData, keys ...interface{}) ([]interface{}, error) {
 }
 
 func GetMap(j JSData, keys ...interface{}) (map[string]interface{}, error) {
+	if len(keys) == 0 {
+		v := j.(map[string]interface{})
+
+		if fmt.Sprintf("%s", reflect.TypeOf(j.(interface{}))) != "map[string]interface {}" {
+			return nil, fmt.Errorf("Value is not a map.")
+		}
+
+		return v, nil
+	}
+
 	v, err := getValue(j, keys...)
 
 	if err != nil {
