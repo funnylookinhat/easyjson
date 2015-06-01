@@ -6,3 +6,4 @@ install:
   - go get github.com/funnylookinhat/easyjson
 notifications:
   email: false
+script: go test ./ -v
