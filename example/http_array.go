@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/funnylookinhat/easyjson/lib"
+	"github.com/funnylookinhat/easyjson"
 	"io/ioutil"
 	"log"
 	"net/http"
