@@ -2,6 +2,8 @@
 
 **Quickly consume JSON in Go.**
 
+[![Build Status](https://travis-ci.org/funnylookinhat/easyjson.svg?branch=master)](https://travis-ci.org/funnylookinhat/easyjson)
+
 While defining structs is a great means to generate a JSON API, it's a bit 
 annoying when you want to consume some arbitrary JSON from another server.
 
